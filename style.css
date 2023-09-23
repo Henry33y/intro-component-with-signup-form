@@ -1,0 +1,113 @@
+:root{
+    --red: hsl(0, 100%, 74%);
+    --red-low: hsla(0, 100%, 74%,0.975);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --dark-blue-low: hsl(249, 10%, 26%,0.3);
+    --dark-blue-medium: hsl(249, 10%, 26%,0.6);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    padding: 100px 120px;
+    background-image: url("images/bg-intro-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--red-low);
+    color: white;
+}
+.section1 h1{
+    font-weight: 700;
+    font-size: 3em;
+}   
+.section2>:nth-child(1){
+    background-color: var(--blue);
+    border-radius: 12px;
+    position: relative;
+}
+.section2>:nth-child(1)::before{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.227);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    border-radius: 12px;
+    z-index: -1;
+}
+.section2>:nth-child(2){
+    background-color: white;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    border-radius: 12px;
+    position: relative;
+}
+.section2>:nth-child(2)::before{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.298);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    border-radius: 12px;
+    z-index: -1;
+}
+form input{
+    outline: 0;
+    border: 1.3px solid var(--dark-blue-low);
+    padding-left: 2em;
+    padding-right: 3.5em;
+    height: 55px;
+    font-size: 1.02em;
+    color: var(--dark-blue);
+    /* font-weight: 600; */
+}
+form input:focus{
+    border: 1.5px solid var(--blue);
+}
+form button[type="submit"]{
+    height: 50px;
+    border: 0;
+    background-color: var(--green);
+    font-weight: 600;
+    font-size: 1.02em;
+    color: white;
+    border-bottom: 3px solid hsl(154, 95%, 33%);
+}
+form p{
+    font-size: 0.725em;
+    color: var(--dark-blue-medium);
+}
+form p>span{
+    color: var(--red);
+    font-weight: 700;
+    font-size: 0.925em;
+    cursor: pointer;
+}
+form svg{
+    right: 25px;
+    top: 15px;
+}
+.errmsg{
+    font-size: 0.8em;
+    color: var(--red);
+    font-style: italic;
+    font-weight: 500;
+    /* display: none !important; */
+}
+@media (max-width:786px) {
+    body{
+        padding: 50px 60px;
+    }
+}
+@media (max-width:450px){
+    body{
+        padding: 30px 15px;
+    }
+}
