@@ -99,7 +99,11 @@ form svg{
     color: var(--red);
     font-style: italic;
     font-weight: 500;
-    /* display: none !important; */
+    display: none;
+}
+.errIcon{
+    display: none;
+    
 }
 @media (max-width:786px) {
     body{
